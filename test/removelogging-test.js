@@ -31,22 +31,30 @@ describe("gulp-remove-logging", function() {
 
       var stream = gulp_remove_logging(cur_test[1]);
 
-      stream.on("data", function (file) {
-        assert.equal(
-          file.contents.toString(),
-          cur_test[2],
-          (cur_test[0] + " should match expected output")
+      stream.on("data", function(file) {
+        assert.ok(file.isStream());
+
+        file.contents.pipe(
+          event_stream.wait(function(error, data) {
+            if (error) {
+              return done(error);
+            }
+
+            assert.equal(
+              data.toString(),
+              cur_test[2],
+              (cur_test[0] + " should match expected output")
+            );
+
+            return done();
+          })
         );
       });
 
       stream.on("error", function(error) {
-        done(
+        return done(
           error || (new Error("Broken pipeline"))
         );
-      });
-
-      stream.on("end", function() {
-        done();
       });
 
       stream.write(mock_file);
