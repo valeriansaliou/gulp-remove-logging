@@ -24,7 +24,23 @@ Lastly, add the configuration settings (see below) to your gulpfile.
 
 ## Task Configuration
 
-TODO TODO TODO
+```javascript
+gulp.task("remove_logging", function() {
+  return gulp.src("src/javascripts/**/*.js")
+    .pipe(
+      gulp_remove_logging({
+        // Options (optional)
+        // eg:
+        // namespace: ['console', 'window.console']
+      })
+    )
+    .pipe(
+      gulp.dest(
+        "build/javascripts/"
+      )
+    );
+});
+```
 
 ### Optional Configuration Properties
 
