@@ -10,10 +10,10 @@
 "use strict";
 
 
-var gulp_util      = require("gulp-util");
-var through        = require("through2");
+var gulp_util       = require("gulp-util");
+var through         = require("through2");
 
-var remove_logging = require("./lib/removelogging");
+var remove_logging  = require("./lib/removelogging");
 
 
 module.exports = function(opts) {
