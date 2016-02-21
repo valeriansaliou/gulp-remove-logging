@@ -1,0 +1,64 @@
+{
+  "name": "gulp-remove-logging",
+  "description": "Removes console logging statements.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/valeriansaliou/gulp-remove-logging",
+
+  "author": {
+    "name": "Valerian Saliou",
+    "email": "valerian@valeriansaliou.name",
+    "url": "https://valeriansaliou.name/"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/valeriansaliou/gulp-remove-logging.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/valeriansaliou/gulp-remove-logging/issues"
+  },
+
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/valeriansaliou/gulp-remove-logging/blob/master/LICENSE"
+    }
+  ],
+
+  "main": "index.js",
+
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+
+  "scripts": {
+    "test": "check-build && istanbul cover _mocha",
+    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+
+  "dependencies": {
+    "gulp-util": "3.0.7",
+    "through2": "2.0.1",
+    "replacestream": "4.0.0"
+  },
+
+  "devDependencies": {
+    "check-build": "2.7.2",
+    "mocha": "2.4.5",
+    "mocha-lcov-reporter": "1.2.0",
+    "istanbul": "0.4.2",
+    "coveralls": "2.11.6",
+    "event-stream": "3.3.2",
+    "vinyl": "1.1.1"
+  },
+
+  "keywords": [
+    "gulpplugin",
+    "console",
+    "log",
+    "debugging",
+    "remove",
+    "statements"
+  ]
+}

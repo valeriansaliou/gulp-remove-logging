@@ -1,0 +1,4 @@
+.jshintrc
+.jscsrc
+.checkbuild
+.travis.yml
