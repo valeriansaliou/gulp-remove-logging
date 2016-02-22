@@ -1,6 +1,6 @@
 # gulp-remove-logging
 
-[![Build Status](https://img.shields.io/travis/valeriansaliou/gulp-remove-logging/master.svg)](https://travis-ci.org/valeriansaliou/gulp-remove-logging) [![Test Coverage](https://img.shields.io/coveralls/valeriansaliou/gulp-remove-logging/master.svg)](https://coveralls.io/github/valeriansaliou/gulp-remove-logging?branch=master) [![NPM](https://img.shields.io/npm/v/gulp-remove-logging.svg)](https://www.npmjs.com/package/gulp-remove-logging) [![Downloads](https://img.shields.io/npm/dt/gulp-remove-logging.svg)](https://www.npmjs.com/package/gulp-remove-logging)
+[![Build Status](https://img.shields.io/travis/valeriansaliou/gulp-remove-logging/master.svg)](https://travis-ci.org/valeriansaliou/gulp-remove-logging) [![Test Coverage](https://img.shields.io/coveralls/valeriansaliou/gulp-remove-logging/master.svg)](https://coveralls.io/github/valeriansaliou/gulp-remove-logging?branch=master) [![NPM](https://img.shields.io/npm/v/gulp-remove-logging.svg)](https://www.npmjs.com/package/gulp-remove-logging) [![Downloads](https://img.shields.io/npm/dt/gulp-remove-logging.svg)](https://www.npmjs.com/package/gulp-remove-logging) [![Gitter](https://img.shields.io/gitter/room/valeriansaliou/gulp-remove-logging.svg)](https://gitter.im/valeriansaliou/gulp-remove-logging)
 
 Removes all console logging statements from your code.
 
