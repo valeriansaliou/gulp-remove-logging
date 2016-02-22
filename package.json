@@ -1,7 +1,7 @@
 {
   "name": "gulp-remove-logging",
   "description": "Removes console logging statements.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/valeriansaliou/gulp-remove-logging",
 
   "author": {
