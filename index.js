@@ -10,9 +10,6 @@
 "use strict";
 
 
-var gulp_util       = require("gulp-util");
-var through         = require("through2");
-
 var remove_logging  = require("./lib/removelogging");
 
 
@@ -58,40 +55,6 @@ module.exports = function(opts) {
     opts.verbose = true;
   }
 
-  var regex_console = new RegExp(
-    ("(" + opts.namespace.join("|") + ")" +
-        ".(?:" + opts.methods.join("|") +
-        ")\\s{0,}\\([^;]*\\)(?!\\s*[;,]?\\s*\\/\\*\\s*" +
-        "RemoveLogging:skip\\s*\\*\\/)\\s{0,};?"),
-    "gi"
-  );
-
   // Proceed transform
-  return through.obj(function(file, encoding, callback) {
-    if (file.isNull()) {
-      return callback(null, file);
-    }
-
-    if (file.isBuffer()) {
-      return callback(
-        new gulp_util.PluginError(
-          "gulp-remove-logging", "Buffers not supported"
-        )
-      );
-    }
-
-    if (file.isStream()) {
-      var streamer = remove_logging.proceed(
-        file, opts, regex_console
-      );
-
-      streamer.on(
-        "error", this.emit.bind(this, "error")
-      );
-
-      file.contents = file.contents.pipe(streamer);
-    }
-
-    return callback(null, file);
-  });
+  return remove_logging.proceed(opts);
 };
