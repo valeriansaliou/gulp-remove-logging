@@ -2,4 +2,3 @@ test/
 .jshintrc
 .jscsrc
 .checkbuild
-.travis.yml
